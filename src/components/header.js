@@ -12,16 +12,7 @@ const Header = () => (
       }}
     >
       <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <Link class="navbar-item" href="https://bulma.io">
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28"
-              alt="Logo brand"
-            />
-          </Link>
-
+        <div class="navbar-brand">   
           <button            
             className="navbar-burger burger"
             aria-label="menu"
@@ -60,15 +51,7 @@ const Header = () => (
             </div>
           </div>
         </div>
-      </nav>
-      <section class="hero is-primary">
-        <div class="hero-body">
-          <p class="title">Documentation</p>
-          <p class="subtitle">
-            Everything you need to <strong>create a website</strong> with Bulma
-          </p>
-        </div>
-      </section>
+      </nav>    
     </div>
   </header>
 )
