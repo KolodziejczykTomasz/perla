@@ -6,6 +6,13 @@ import Header from "./header"
 import "./layout.css"
 import "bulma/css/bulma.css"
 
+import styled from "styled-components"
+
+const Footer = styled.div`
+  height: 5vh;
+  background-color: black;
+`
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -28,13 +35,9 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer class="footer">
-          <div className="content has-text-centered">
+        <Footer>
+          <div>
             <p>
-              <strong>Bulma</strong> by{" "}
-              <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
-              licensed
-              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
               The website content is licensed{" "}
               <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
                 CC BY NC SA 4.0
@@ -42,7 +45,7 @@ const Layout = ({ children }) => {
               .
             </p>
           </div>
-        </footer>
+        </Footer>
       </div>
     </>
   )
