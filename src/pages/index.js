@@ -7,26 +7,48 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  display: block;
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  height: 80vh;
   width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1250px;
-  height: 80%;
 `
+const AsideLeft = styled.div`
+  background-color: #616161;  
+`
+
+const Description = styled.p`
+  display: flex;
+  color: #fff;
+  text-align: right;
+  height: 300px;
+  width: 100%;
+`
+
+const AsideRight = styled.div`
+  align-self: center;
+`
+
 const BackgroundPhoto = styled(Image)`
   display: block;
   margin: 0 auto;
   width: 80%;
-  max-width: 800px;
-  max-height: 80%;
 `
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Wrapper>
-      <BackgroundPhoto />
+      <AsideLeft>
+        <Description>
+          Zespół Tańca Ludowego Perła Warmii wykonuje polskie tańce narodowe,
+          tańce warmińskie oraz suity z regionów: Spisz, Kurpie, Kaszuby,
+          Biłgoraj, Opoczno, Śląsk, Górale Żywieccy, Krakowiacy Wschodni,
+          Wileńszczyzna, Lublin.
+        </Description>
+      </AsideLeft>
+      <AsideRight>
+        <BackgroundPhoto />
+      </AsideRight>
     </Wrapper>
   </Layout>
 )
