@@ -27,13 +27,13 @@ const DescriptionBand = styled.div`
 `
 
 const AsideRight = styled.div`
-  align-self: center;
+  display: grid;
+  place-items: center;
 `
 
 const BackgroundPhoto = styled(Image)`
-  display: block;
-  margin: 0 auto;
-  width: 60%;
+  display: grid;
+  place-items: center;
 `
 
 const IndexPage = () => (

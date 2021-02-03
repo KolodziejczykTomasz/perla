@@ -7,19 +7,24 @@ const Image = () => {
     query {
       placeholderImage: file(relativePath: { eq: "Logo.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fixed(width: 700, quality: 100) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  if (!data?.placeholderImage?.childImageSharp?.fixed) {
     return <div>Picture not found</div>
   }
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Img
+      fixed={data.placeholderImage.childImageSharp.fixed}         
+      alt="Logo Band"      
+    />
+  )
 }
 
 export default Image
