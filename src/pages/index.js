@@ -11,19 +11,22 @@ const Wrapper = styled.div`
   width: 100%;
 `
 const AsideLeft = styled.div`
-  display: grid;
-  place-items: center;
+display: flex;
+align-items: center;  
   background-color: #616161;
 `
 
 const DescriptionBand = styled.div`
-  display: grid;
-  place-items: center;
-  color: #fff;
+display: flex;
+align-items: center;  
+color: #fff;
   text-align: right;
   height: 300px;
   width: 100%;
   background-color: grey;
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 26px;
 `
 
 const AsideRight = styled.div`

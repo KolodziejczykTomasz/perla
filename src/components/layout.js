@@ -3,29 +3,30 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import "./layout.css"
-import "bulma/css/bulma.css"
+
 
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.9fr 0.1fr;
-  height: 70vh;
+  display: flex;
+  flex-direction: column; 
+  height: 100vh;  
 `
 
 const Footer = styled.div`
-  height: 5vh;
+  height: 100px;
   background-color: black;
 `
 const MenuList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-self: center;
 `
 const MenuListItem = styled.li`
   justify-content: space-between;
   width: 150px;
+  align-self: center;
 `
 
 const MenuListItemLink = styled(Link)`
