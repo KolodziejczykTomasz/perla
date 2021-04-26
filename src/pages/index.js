@@ -1,4 +1,5 @@
 import React from "react"
+import { ButtonMore } from "../components/buttonmore"
 import Layout from "../components/layout"
 import Image from "../components/image"
 
@@ -7,19 +8,27 @@ import styled from "styled-components"
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  position: relative;
 `
+
+const ButtonWrapper = styled.div`
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+`
+
 const AsideLeft = styled.div`
-display: flex;
-align-items: center;  
+  display: flex;
+  align-items: center;
   background-color: #616161;
 `
 
 const DescriptionBand = styled.div`
-display: flex;
-align-items: center;  
-color: #fff;
+  display: flex;
+  align-items: center;
+  color: #fff;
   text-align: right;
   height: 300px;
   width: 100%;
@@ -40,7 +49,7 @@ const BackgroundPhoto = styled(Image)`
 `
 
 const IndexPage = () => (
-  <Layout> 
+  <Layout>
     <Wrapper>
       <AsideLeft>
         <DescriptionBand>
@@ -52,6 +61,9 @@ const IndexPage = () => (
       </AsideLeft>
       <AsideRight>
         <BackgroundPhoto />
+        <ButtonWrapper>
+          <ButtonMore />
+        </ButtonWrapper>
       </AsideRight>
     </Wrapper>
   </Layout>
