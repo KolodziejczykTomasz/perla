@@ -10,17 +10,24 @@ const Wrapper = styled.div`
   position: absolute;
   width: 80px;
   height: 80px;
-  background-color: black;
+  font-weight: 600;
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.darkViolet};
+  border: 5px solid ${({ theme }) => theme.colors.darkGreen};
   text-transform: uppercase;
   border-radius: 50px;
   transition: 0.2s;
+  &:hover {
+    border: 5px solid ${({ theme }) => theme.colors.darkViolet};
+  }
+
   & a {
-    color: #414141;
+    color: ${({ theme }) => theme.colors.darkViolet};
     text-decoration: none;
   }
 
   &:hover a {
-    color: white;
+    color: ${({ theme }) => theme.colors.darkGreen};
     text-decoration: none;
   }
 `

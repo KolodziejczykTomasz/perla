@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const AsideLeft = styled.div`
   display: flex;
   align-items: center;
-  background-color: #616161;
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 const AsideRight = styled.div`

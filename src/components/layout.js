@@ -1,23 +1,25 @@
 import React from "react"
+import { ThemeProvider } from "styled-components"
+import { theme } from "../assets/styles/theme/theme"
 import PropTypes from "prop-types"
 
 import "./layout.css"
-
 
 import styled from "styled-components"
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column; 
-  height: 100vh;  
+  flex-direction: column;
+  height: 100vh;
 `
-
 
 const Layout = ({ children }) => {
   return (
-    <Wrapper>
-      <main>{children}</main>      
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <main>{children}</main>
+      </Wrapper>
+    </ThemeProvider>
   )
 }
 

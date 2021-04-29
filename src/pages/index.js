@@ -22,7 +22,8 @@ const ButtonWrapper = styled.div`
 const AsideLeft = styled.div`
   display: flex;
   align-items: center;
-  background-color: #616161;
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.darkViolet};
 `
 
 const DescriptionBand = styled.div`
@@ -32,10 +33,12 @@ const DescriptionBand = styled.div`
   text-align: right;
   height: 300px;
   width: 100%;
-  background-color: grey;
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.darkViolet};
   padding-right: 40px;
   padding-left: 40px;
   font-size: 26px;
+  border-right: 5px solid ${({ theme }) => theme.colors.darkGreen};
 `
 
 const AsideRight = styled.div`

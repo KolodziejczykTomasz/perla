@@ -7,18 +7,20 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: black;
-  justify-content: space-between; 
+  background-color: ${({ theme }) => theme.colors.white};
+  justify-content: space-between;
   align-self: center;
   text-decoration: none;
 `
 
 const activeClassName = "active"
 const MenuLink = styled(Link).attrs({ activeClassName })`
-  color: #414141;
+  color: ${({ theme }) => theme.colors.darkViolet};
   padding: 10px 30px 10px 0;
   text-decoration: none;
   text-align: right;
+  text-transform: uppercase;
+  font-weight: 600;
   position: relative;
   &.${activeClassName} {
     &::after {
@@ -31,11 +33,11 @@ const MenuLink = styled(Link).attrs({ activeClassName })`
     content: "";
     position: absolute;
     width: 18px;
-    height: 3px;
+    height: 5px;
     top: 50%;
     transform: translateX(-100%);
     right: -18px;
-    background-color: red;
+    background-color: ${({ theme }) => theme.colors.darkGreen};
   }
 `
 
